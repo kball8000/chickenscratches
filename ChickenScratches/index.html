@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='chicken-scratches'>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--  Icons  -->    
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+
+    <!--  Web Application Manifest  -->
+    <link rel='manifest' href="manifest.json">
+    
+    <title>Chicken Scratches</title>
+
+    <!--  Library Scripts  -->
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/lib/angular-animate.min.js"></script>
+    <script src="js/lib/angular-aria.min.js"></script>
+    <script src="js/lib/angular-route.min.js"></script>
+    <script src="js/lib/angular-sanitize.min.js"></script>
+    <script src="js/lib/firebase.js"></script>
+    <script src="js/lib/angularfire.min.js"></script>
+     
+    <!--  Custom Scripts  -->
+    <script src="js/main.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/filters.js"></script>
+
+    <!--  CSS  -->
+    <link rel="stylesheet" href="css/chicken-scratches.css">
+    <link rel="stylesheet" href="css/lib/bootstrap/css/bootstrap.min.css">
+    <link rel='icon' href="favicon.ico">
+    
+    <script type="text/javascript">
+      var h = document.getElementsByTagName('head'),
+          elem = '<base href="' + window.location.pathname + '" />';
+      angular.element(h).append(angular.element(elem));
+    </script>
+
+  </head>
+  <body>
+    <h1> Hello </h1>
+
+
+
+  </body>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyB3-ANif-JXQRiW4hBPKN4QsStBDhJDqwo",
+      authDomain: "kball17-df.firebaseapp.com",
+      databaseURL: "https://kball17-df.firebaseio.com",
+      projectId: "kball17-df",
+      storageBucket: "kball17-df.appspot.com",
+      messagingSenderId: "88054819590"
+    };
+    firebase.initializeApp(config);
+
+    /* ServiceWorker requires https or localhost, not file://... */
+    // navigator.serviceWorker.register('/sw.js');
+  </script>
+</html>
