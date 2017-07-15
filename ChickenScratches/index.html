@@ -42,12 +42,15 @@
     </script>
 
   </head>
+
   <body>
-    <h1> Hello </h1>
-
-
-
+    <div ng-controller='mainCtrl as main'>
+      <h1> Hello {{main.name}} </h1>
+      <br> {{main.ts | date}} <br>
+      <button class="btn btn-primary" ng-click='main.testFirstBtn("hi")'>First Button</button>
+    </div>
   </body>
+
   <script>
     // Initialize Firebase
     var config = {
@@ -60,7 +63,7 @@
     };
     firebase.initializeApp(config);
 
-    /* ServiceWorker requires https or localhost, not file://... */
+    /* ServiceWorker requires https or localhost, not file:/... */
     // navigator.serviceWorker.register('/sw.js');
   </script>
 </html>
