@@ -44,10 +44,21 @@
   </head>
 
   <body>
-    <div ng-controller='mainCtrl as main'>
-      <h1> Hello {{main.name}} </h1>
-      <br> {{main.ts | date}} <br>
-      <button class="btn btn-primary" ng-click='main.testFirstBtn("hi")'>First Button</button>
+    <div ng-controller='mainCtrl as main' class="container">
+      <h1> Chicken Scratches </h1>
+      {{main.title}}
+      <!-- <input placeholder='title' ng-model='main.selectedMsg.title' ng-change='main.updateMsg()'>
+      <input placeholder='message' ng-model='main.selectedMsg.content' ng-change='main.updateMsg()'> -->
+      <input ng-model='main.selectedMsg.title' ng-change='main.updateMsg()'>
+      <input ng-model='main.selectedMsg.content' ng-change='main.updateMsg()'>
+      <button class="btn btn-primary" ng-click='main.logData()'>Log</button>
+      <button class="btn btn-primary" ng-click='main.newMsg()'>New Msg</button>
+      <ul ng-if='main.messages.$resolved'> 
+        <li>Hey</li>
+        <li ng-repeat='msg in main.messages' ng-click='main.selectMsg(msg)'> 
+          {{msg.title}} | {{msg.content}}
+        </li>
+      </ul>
     </div>
   </body>
 
